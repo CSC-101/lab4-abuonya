@@ -1,4 +1,21 @@
 import data
+import math
+
+class Point:
+    # Initialize a new Point object.
+    # input: x-coordinate as a float
+    # input: y-coordinate as a float
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
+    def __repr__(self) -> str:
+        return 'Point({}, {})'.format(self.x, self.y)
+
+    def __eq__(self, other) -> bool:
+        return (other is self or
+                type(other) == Point and
+                math.isclose(self.x, other.x) and
+                math.isclose(self.y, other.y))
 
 # Write your functions for each part in the space below.
 
@@ -13,32 +30,22 @@ def first_element(input: list[list[int]] ) -> list:
     newList = [x for x in input if x]
     return [x[0] for x in newList]
 # Part 2
-class Point:
-    # Initialize a new Point object.
-    # input: x-coordinate as a float
-    # input: y-coordinate as a float
-    def __init__(self, x: float, y: float):
-        self.x = x
-        self.y = y
-
 def x_coordinates(input: list[Point]):
     xcoordinates = [point for point in input]
     return [point[0] for point in xcoordinates]
 
 # Part 3
-# Changed input to "points" for clarity.
-def are_in_postive_quadrant(points: list[Point]):
-    newlist = []
+def are_in_positive_quadrant(points: list[Point]) -> list[int]: # Changed input to "points" for clarity.
+    newList = []
     for point in points:
-        if point.x [0] > 0 and point.y [1] > 0:
-            newlist.append[point]
+        if point.x > 0 and point.y > 0:
+            newList.append(point)
     else:
         return newList
 
-
-
-
 # Part 4
+def distance(points: Point):
+
 
 
 # Part 5

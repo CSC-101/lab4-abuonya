@@ -1,9 +1,25 @@
 import data
 import lab4
 import unittest
+import math
 
 
 # Write your test cases for each part below.
+class Point:
+    # Initialize a new Point object.
+    # input: x-coordinate as a float
+    # input: y-coordinate as a float
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
+    def __repr__(self) -> str:
+        return 'Point({}, {})'.format(self.x, self.y)
+
+    def __eq__(self, other) -> bool:
+        return (other is self or
+                type(other) == Point and
+                math.isclose(self.x, other.x) and
+                math.isclose(self.y, other.y))
 
 class TestCases(unittest.TestCase):
     # Part 1
@@ -35,18 +51,18 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 3
-    class Point:
-        # Initialize a new Point object.
-        # input: x-coordinate as a float
-        # input: y-coordinate as a float
-        def __init__(self, x: float, y: float):
-            self.x = x
-            self.y = y
+    #POSTIVE POINTS ONLY
+    def test_are_in_positive_quadrant1(self):
+        input = [Point(1,2)]
+        result = lab4.are_in_positive_quadrant(input)
+        expected = [Point(1,2)]
+        self.assertEqual(expected, result)
 
-    def test_are_in_postive_quadrant_1(self):
-        input = [self.Point(1,2), self.Point(3,4)]
-        result = lab4.are_in_postive_quadrant(input)
-        expected = [self.Point(1,2), self.Point(3,4)]
+    # some different quadrants now...
+    def test_are_in_positive_quadrant2(self):
+        input = [Point(-5,5), Point(-1,-1), Point(4,4)]
+        result = lab4.are_in_positive_quadrant(input)
+        expected = [Point(4,4)]
         self.assertEqual(expected, result)
     # Part 4
 
