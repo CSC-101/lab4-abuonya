@@ -13,7 +13,17 @@ def first_element(input: list[list[int]] ) -> list:
     newList = [x for x in input if x]
     return [x[0] for x in newList]
 # Part 2
+class Point:
+    # Initialize a new Point object.
+    # input: x-coordinate as a float
+    # input: y-coordinate as a float
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
 
+def x_coordinates(input: list[Point]):
+    xcoordinates = [point for point in input]
+    return [point[0] for point in xcoordinates]
 
 # Part 3
 
