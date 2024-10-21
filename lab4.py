@@ -44,7 +44,10 @@ def are_in_positive_quadrant(points: list[Point]) -> list[int]: # Changed input 
         return newList
 
 # Part 4
-def distance(points: Point):
+def distance(point1: Point, point2: Point) -> float:
+    euclidean_distance = math.dist(point1 , point2)
+    return euclidean_distance
+
 
 
 
