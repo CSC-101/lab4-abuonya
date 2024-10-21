@@ -26,13 +26,14 @@ def x_coordinates(input: list[Point]):
     return [point[0] for point in xcoordinates]
 
 # Part 3
-def are_in_postive_quadrant(input: list[Point]):
-    xcoordinates = [point for point in input]
+# Changed input to "points" for clarity.
+def are_in_postive_quadrant(points: list[Point]):
     newlist = []
-    if point[0] > 0 and point[1] > 0:
-        newlist.append[point]
+    for point in points:
+        if point.x [0] > 0 and point.y [1] > 0:
+            newlist.append[point]
     else:
-        return newlist
+        return newList
 
 
 

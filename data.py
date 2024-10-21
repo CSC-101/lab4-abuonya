@@ -23,7 +23,6 @@ class Point:
     def __repr__(self) -> str:
         return 'Point({}, {})'.format(self.x, self.y)
 
-
     # Compare the Point object with another value to determine equality.
     # input: Point against which to compare
     # input: Another value to compare to the Point

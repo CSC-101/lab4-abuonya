@@ -35,8 +35,19 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 3
+    class Point:
+        # Initialize a new Point object.
+        # input: x-coordinate as a float
+        # input: y-coordinate as a float
+        def __init__(self, x: float, y: float):
+            self.x = x
+            self.y = y
 
-
+    def test_are_in_postive_quadrant_1(self):
+        input = [self.Point(1,2), self.Point(3,4)]
+        result = lab4.are_in_postive_quadrant(input)
+        expected = [self.Point(1,2), self.Point(3,4)]
+        self.assertEqual(expected, result)
     # Part 4
 
 
