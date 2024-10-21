@@ -79,8 +79,12 @@ class TestCases(unittest.TestCase):
         expected = 11.40175425099138
         self.assertEqual(expected, result)
     # Part 5
-def manha
-
+    def test_manhattan_distance1(self):
+        input = (Point(1,2))
+        another = (Point(3,4))
+        result = lab4.manhattan_distance(input, another)
+        expected = 2
+        self.assertEqual(expected, result)
     # Part 6
 
 

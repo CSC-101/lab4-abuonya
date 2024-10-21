@@ -48,9 +48,10 @@ def distance(point1: Point, point2: Point) -> float:
     euclidean_distance = math.sqrt((point2.x - point1.x) ** 2 + (point2.y - point1.y) ** 2)
     return euclidean_distance
 
-
 # Part 5
-
+def manhattan_distance(point1: Point, point2: Point):
+    manhattan_dist = sum(abs(point2.x - point1.x))
+    return manhattan_dist
 
 # Part 6
 
