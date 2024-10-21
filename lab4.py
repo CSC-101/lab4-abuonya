@@ -50,9 +50,11 @@ def distance(point1: Point, point2: Point) -> float:
 
 # Part 5
 def manhattan_distance(point1: Point, point2: Point):
-    manhattan_dist = sum(abs(point2.x - point1.x))
+    manhattan_dist = (abs(point1.x - point2.x)) + (abs(point1.y - point2.y))
     return manhattan_dist
 
 # Part 6
+def distance_all(point: list[Point]) ->list:
+
 
 

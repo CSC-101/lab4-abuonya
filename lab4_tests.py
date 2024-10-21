@@ -83,8 +83,16 @@ class TestCases(unittest.TestCase):
         input = (Point(1,2))
         another = (Point(3,4))
         result = lab4.manhattan_distance(input, another)
-        expected = 2
+        expected = 4
         self.assertEqual(expected, result)
+
+    def test_manhattan_distance2(self):
+        input = (Point(6,6))
+        another = (Point(-2,5))
+        result = lab4.manhattan_distance(input, another)
+        expected = 9
+        self.assertEqual(expected, result)
+
     # Part 6
 
 
