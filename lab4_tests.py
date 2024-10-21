@@ -69,11 +69,17 @@ class TestCases(unittest.TestCase):
         input = (Point(1,2))
         another = (Point(3,4))
         result = lab4.distance(input, another)
-        expected = 2.828427
+        expected = 2.8284271247461903
         self.assertEqual(expected, result)
 
+    def test_distance2(self):
+        input = (Point(-2,4))
+        another = (Point(5,-5))
+        result = lab4.distance(input, another)
+        expected = 11.40175425099138
+        self.assertEqual(expected, result)
     # Part 5
-
+def manha
 
     # Part 6
 
