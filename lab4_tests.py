@@ -15,7 +15,10 @@ class TestCases(unittest.TestCase):
 
 
     def test_first_element_2(self):
-        # write a second test here
+        input = [[1,2], [], [3,4]]
+        result = lab4.first_element(input)
+        expected = [1,3]
+        self.assertEqual(expected, result)
 
 
     # Part 2
