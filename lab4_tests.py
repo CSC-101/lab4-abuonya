@@ -94,7 +94,17 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 6
+    def test_distance_all1(self):
+        input = [(Point(6,6))]
+        result = lab4.distance_all(input)
+        expected = [8.48528137423857]
+        self.assertEqual(expected, result)
 
+    def test_distance_all2(self):
+        input = [(Point(-5,-11))]
+        result = lab4.distance_all(input)
+        expected = [12.083045973594572]
+        self.assertEqual(expected, result)
 
 
 
